@@ -1,0 +1,72 @@
+<mat-dialog-content class="mat-typography">
+    <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Escola</mat-label>
+            <input matInput [(ngModel)]="aluno.escolaAluno" name="escolaAluno" placeholder="Escola São José" required>
+            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="aluno.escolaAluno=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Nome</mat-label>
+              <input matInput [(ngModel)]="aluno.nomeAluno" name="nomeAluno" placeholder="Luan" required>
+              <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="aluno.nomeAluno=''">
+                  <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Nascimento</mat-label>
+                <input matInput [(ngModel)]="aluno.dataNascimentoAluno" name="nascimentoAluno" placeholder="24/08/1997" required>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="aluno.dataNascimentoAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Sexo</mat-label>
+                <mat-select [formControl]="sexoControl" required>
+                    <mat-option [value]="'M'">Masculino</mat-option>
+                    <mat-option [value]="'F'">Feminino</mat-option>
+                </mat-select>
+                <button mat-button  matSuffix mat-icon-button aria-label="Clear" (click)="aluno.sexo=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Mãe</mat-label>
+                <input matInput [(ngModel)]="aluno.maeAluno" name="maeAluno" placeholder="Maria" required>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="aluno.maeAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Cep</mat-label>
+                <input type="number" matInput [(ngModel)]="aluno.cepAluno" name="cepAluno" placeholder="32215215" required>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="aluno.cepAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+    </form>
+      
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="false">Cancel</button>
+    <button mat-button (click)="closeDialogCricao()" cdkFocusInitial color="primary">Create</button>
+</mat-dialog-actions>
+

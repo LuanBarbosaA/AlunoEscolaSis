@@ -1,17 +1,18 @@
+import { SharedModule } from './../shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { AlunoComponent } from './aluno/aluno.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { ModalEdicaoComponent } from './modal-edicao/modal-edicao.component';
+import { ModalCriacaoComponent } from './modal-criacao/modal-criacao.component';
 
 @NgModule({
     declarations: [
-        AlunoComponent
+        AlunoComponent,
+        ModalEdicaoComponent,
+        ModalCriacaoComponent
     ],
     imports: [
-        BrowserModule,
-        BrowserAnimationsModule
+        SharedModule
     ],
     exports: [AlunoComponent]
 })

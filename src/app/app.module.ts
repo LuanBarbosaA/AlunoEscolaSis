@@ -5,8 +5,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AlunoComponent } from './components/aluno/aluno.component';
-import { HomeComponent } from './pages/home/home.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,9 @@ import { HomeComponent } from './pages/home/home.component';
     AppRoutingModule,
     PagesModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

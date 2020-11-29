@@ -1,0 +1,58 @@
+<mat-dialog-content class="mat-typography">
+    <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="data.nomeAluno" [value]="data.nomeAluno" name="nomeAluno">
+          <button mat-button *ngIf="data.nomeAluno" matSuffix mat-icon-button aria-label="Clear" (click)="data.nomeAluno=''">
+              <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Nascimento</mat-label>
+                <input matInput [(ngModel)]="data.dataNascimentoAluno" [value]="data.dataNascimentoAluno" name="nascimentoAluno">
+                <button mat-button *ngIf="data.dataNascimentoAluno" matSuffix mat-icon-button aria-label="Clear" (click)="data.dataNascimentoAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Sexo</mat-label>
+                <input matInput [(ngModel)]="data.sexo" [value]="data.sexo" name="sexo">
+                <button mat-button *ngIf="data.sexo" matSuffix mat-icon-button aria-label="Clear" (click)="data.sexo=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Mãe</mat-label>
+                <input matInput [(ngModel)]="data.maeAluno" [value]="data.maeAluno" name="maeAluno">
+                <button mat-button *ngIf="data.maeAluno" matSuffix mat-icon-button aria-label="Clear" (click)="data.maeAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Cep</mat-label>
+                <input matInput [(ngModel)]="data.cepAluno" [value]="data.cepAluno" name="cepAluno">
+                <button mat-button *ngIf="data.cepAluno" matSuffix mat-icon-button aria-label="Clear" (click)="data.cepAluno=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+
+    </form>
+      
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="data">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Update</button>
+</mat-dialog-actions>
